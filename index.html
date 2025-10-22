@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beyond Limits Care Foundation</title>
 
-  <!-- Favicons: multi-format for broad compatibility -->
- <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="BLCF" />
-<link rel="manifest" href="/site.webmanifest" />
-  
+  <!-- Favicons: all point to static folder -->
+  <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="BLCF" />
+  <link rel="manifest" href="/static/site.webmanifest" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
   <style>
     .hero-bg { background-color: #8dd0bc; background-image: linear-gradient(to right, #8dd0bc, #6bb9a0); color: white; }
     .testimonial-card { transition: all 0.3s ease; }
@@ -31,7 +30,7 @@
                 <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="flex items-center" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-                        <img alt="Beyond Limits Logo" class="h-8 w-auto mr-2" />
+                        <img src="image.jpg" alt="Beyond Limits Logo" class="h-8 w-auto mr-2" />
                         <span class="text-xl font-bold text-dark" style="font-family: Georgia">Beyond Limits</span>
                     </a>
                 </div>
@@ -91,7 +90,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Equine Therapy -->
                 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-                    <img alt="Child with horse" class="w-full h-48 object-cover" />
+                    <img src="image.jpg" alt="Child with horse" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <i class="text-accent mr-2" data-feather="activity"></i>
@@ -102,7 +101,7 @@
                 </div>
                 <!-- Village Farm Program -->
                 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-                    <img alt="Village Farm" class="w-full h-48 object-cover" />
+                    <img src="image.jpg" alt="Village Farm" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <i class="text-accent mr-2" data-feather="home"></i>
@@ -113,7 +112,7 @@
                 </div>
                 <!-- Community Partnerships -->
                 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-                    <img alt="Community support group" class="w-full h-48 object-cover" />
+                    <img src="image.jpg" alt="Community support group" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <div class="flex items-center mb-2">
                             <i class="text-accent mr-2" data-feather="users"></i>
@@ -253,3 +252,19 @@
                         <div>
                             <h3 class="text-xl font-bold text-dark mb-2">Francis Bisignano</h3>
                             <p class="text-gray-600">Inspired by his autistic brother's love for horses, Francis
+                        </div>
+                        <!-- More founder info here -->
+                    </div>
+                `
+            });
+        }
+        function showFeatureAlert() {
+            Swal.fire({
+                icon: 'info',
+                title: 'Coming Soon!',
+                text: 'This feature is not yet available.',
+            });
+        }
+    </script>
+</body>
+</html>
