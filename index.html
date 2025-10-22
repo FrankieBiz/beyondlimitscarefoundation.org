@@ -1,55 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" type="image/jpeg" href="static/favicon.jpg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond Limits Care Foundation</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8dd0bc',
-                        secondary: '#6bb9a0',
-                        accent: '#10B981',
-                        dark: '#1F2937',
-                        light: '#F3F4F6'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        .hero-bg {
-            background-color: #8dd0bc;
-            background-image: linear-gradient(to right, #8dd0bc, #6bb9a0);
-            color: white;
-        }
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .benefit-icon {
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: rgba(16, 185, 129, 0.1);
-            margin: 0 auto 1rem;
-        }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond Limits Care Foundation</title>
+
+  <!-- Favicons: multi-format for broad compatibility -->
+  <link rel="icon" href="/static/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/static/android-chrome-512x512.png" />
+  <link rel="manifest" href="/static/site.webmanifest" />
+  <!-- Optional: fallback JPEG favicon -->
+  <link rel="icon" type="image/jpeg" href="/static/favicon.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    .hero-bg { background-color: #8dd0bc; background-image: linear-gradient(to right, #8dd0bc, #6bb9a0); color: white; }
+    .testimonial-card { transition: all 0.3s ease; }
+    .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
+    .benefit-icon { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(16,185,129,0.1); margin: 0 auto 1rem; }
+  </style>
 </head>
 <body class="font-sans bg-light">
     <!-- Navigation -->
@@ -59,7 +34,7 @@
                 <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="flex items-center" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-                        <img src="https://huggingface.co/spaces/BeyondLimitsCare/hooves-hearts-healing-haven/resolve/main/images/BCFL%20Logo%20(1).png" alt="Beyond Limits Logo" class="h-8 w-auto mr-2">
+                        <img alt="Beyond Limits Logo" class="h-8 w-auto mr-2" />
                         <span class="text-xl font-bold text-dark" style="font-family: Georgia">Beyond Limits</span>
                     </a>
                 </div>
@@ -72,7 +47,7 @@
                     <button onclick="showFeatureAlert()" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition">Donate</button>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-dark" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-dark">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
@@ -83,7 +58,7 @@
                 <div class="fixed inset-y-0 right-0 w-72 bg-white shadow-lg transform transition-transform duration-300 translate-x-full">
                     <div class="flex flex-col h-full p-4">
                         <div class="flex justify-end mb-4">
-                            <button onclick="toggleMobileMenu()" class="p-2 text-dark hover:text-primary">
+                            <button class="p-2 text-dark hover:text-primary" onclick="toggleMobileMenu()">
                                 <i data-feather="x"></i>
                             </button>
                         </div>
@@ -119,10 +94,10 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Equine Therapy -->
                 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-                    <img src="https://huggingface.co/spaces/FrankieBiz/hooves-hearts-foundation/resolve/main/images/horses-2833223_1920.jpg" alt="Child with horse" class="w-full h-48 object-cover">
+                    <img alt="Child with horse" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <div class="flex items-center mb-2">
-                            <i data-feather="activity" class="text-accent mr-2"></i>
+                            <i class="text-accent mr-2" data-feather="activity"></i>
                             <h3 class="text-xl font-bold text-dark">Equine Therapy</h3>
                         </div>
                         <p class="text-gray-600 mb-4">Therapeutic riding sessions led by certified autism-trained instructors that help children develop physical, emotional, and cognitive skills.</p>
@@ -130,10 +105,10 @@
                 </div>
                 <!-- Village Farm Program -->
                 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-                    <img src="https://huggingface.co/spaces/FrankieBiz/hooves-hearts-foundation/resolve/main/images/Screenshot%202025-10-01%20at%205.08.39 PM.png" alt="Village Farm" class="w-full h-48 object-cover">
+                    <img alt="Village Farm" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <div class="flex items-center mb-2">
-                            <i data-feather="home" class="text-accent mr-2"></i>
+                            <i class="text-accent mr-2" data-feather="home"></i>
                             <h3 class="text-xl font-bold text-dark">Village Farm Program</h3>
                         </div>
                         <p class="text-gray-600 mb-4">Animal interaction with goats, sheep, bunnies, ducks, and horses at The Village Farm (2020 Woodbourne Road, Langhorne, PA).</p>
@@ -141,10 +116,10 @@
                 </div>
                 <!-- Community Partnerships -->
                 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-                    <img src="https://huggingface.co/spaces/FrankieBiz/hooves-hearts-foundation/resolve/main/images/kat-lambeth-5BMaXLNf2xs-unsplash.jpg" alt="Community support group" class="w-full h-48 object-cover">
+                    <img alt="Community support group" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <div class="flex items-center mb-2">
-                            <i data-feather="users" class="text-accent mr-2"></i>
+                            <i class="text-accent mr-2" data-feather="users"></i>
                             <h3 class="text-xl font-bold text-dark">Community Partnerships</h3>
                         </div>
                         <p class="text-gray-600 mb-4">Fully funded programs expanding access to new schools and organizations through community support and partnerships.</p>
@@ -161,7 +136,7 @@
                 <!-- Emotional -->
                 <div class="text-center">
                     <div class="benefit-icon">
-                        <i data-feather="smile" class="text-accent w-6 h-6"></i>
+                        <i class="text-accent w-6 h-6" data-feather="smile"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-2">Emotional</h3>
                     <p class="text-gray-600">Reducing stress & anxiety while building confidence and emotional regulation</p>
@@ -169,7 +144,7 @@
                 <!-- Cognitive -->
                 <div class="text-center">
                     <div class="benefit-icon">
-                        <i data-feather="cpu" class="text-accent w-6 h-6"></i>
+                        <i class="text-accent w-6 h-6" data-feather="cpu"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-2">Cognitive</h3>
                     <p class="text-gray-600">Improving focus, problem-solving skills, and sequential thinking</p>
@@ -177,7 +152,7 @@
                 <!-- Physical -->
                 <div class="text-center">
                     <div class="benefit-icon">
-                        <i data-feather="activity" class="text-accent w-6 h-6"></i>
+                        <i class="text-accent w-6 h-6" data-feather="activity"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-2">Physical</h3>
                     <p class="text-gray-600">Developing balance, coordination, muscle tone and motor skills</p>
@@ -185,7 +160,7 @@
                 <!-- Social -->
                 <div class="text-center">
                     <div class="benefit-icon">
-                        <i data-feather="users" class="text-accent w-6 h-6"></i>
+                        <i class="text-accent w-6 h-6" data-feather="users"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-2">Social</h3>
                     <p class="text-gray-600">Enhancing communication, trust, empathy and teamwork abilities</p>
@@ -199,7 +174,7 @@
             <h2 class="text-3xl font-bold text-dark mb-4">Stay Connected</h2>
             <p class="text-gray-600 mb-8">Subscribe for updates on our programs, events, and success stories.</p>
             <form class="flex flex-col sm:flex-row gap-2">
-                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <input type="email" class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your email address" />
                 <button type="submit" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-md transition">Subscribe</button>
             </form>
         </div>
@@ -217,17 +192,17 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Programs</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white">Equine Therapy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Village Farm</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Community Partners</a></li>
+                        <a href="#" class="text-gray-300 hover:text-white">Equine Therapy</a>
+                        <a href="#" class="text-gray-300 hover:text-white">Village Farm</a>
+                        <a href="#" class="text-gray-300 hover:text-white">Community Partners</a>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-4">Get Involved</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white">Volunteer</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Partner</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Donate</a></li>
+                        <a href="#" class="text-gray-300 hover:text-white">Volunteer</a>
+                        <a href="#" class="text-gray-300 hover:text-white">Partner</a>
+                        <a href="#" class="text-gray-300 hover:text-white">Donate</a>
                     </ul>
                 </div>
                 <div class="space-y-4">
@@ -236,13 +211,13 @@
                         <h4 class="font-medium text-gray-300 mb-1">For general inquiries:</h4>
                         <div class="flex flex-wrap items-center gap-2">
                             <i data-feather="mail" class="w-4 h-4 text-gray-300"></i>
-                            <a href="mailto:info@beyondlimitscarefoundation.org" class="text-gray-300 hover:text-white transition break-all">info@beyondlimitscarefoundation.org</a>
+                            <a class="text-gray-300 hover:text-white transition break-all" href="mailto:info@beyondlimitscarefoundation.org">info@beyondlimitscarefoundation.org</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Beyond Limits Care Foundation. All rights reserved.</p>
+                © 2025 Beyond Limits Care Foundation. All rights reserved.
                 <p class="mt-2">501(c)(3) Non-Profit Organization</p>
                 <script>
                     // Make all contact links trigger the popup
@@ -256,9 +231,9 @@
             </div>
         </div>
     </footer>
+
     <script>
         feather.replace();
-
         // Mobile menu toggle function
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
@@ -266,10 +241,9 @@
             menu.classList.toggle('hidden');
             menuPanel.classList.toggle('translate-x-0');
         }
-
         // Initialize mobile menu button
         document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
-        
+
         // Simple animation for testimonial cards
         document.querySelectorAll('.testimonial-card').forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.1}s`;
@@ -281,63 +255,4 @@
                     <div class="text-left space-y-6">
                         <div>
                             <h3 class="text-xl font-bold text-dark mb-2">Francis Bisignano</h3>
-                            <p class="text-gray-600">Inspired by his autistic brother's love for horses, Francis recognized the therapeutic power of animals. His personal connection fuels his commitment to helping special needs students discover growth and confidence through farm-based programs.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-dark mb-2">Dari Rozinsky</h3>
-                            <p class="text-gray-600">With experience in local politics and community initiatives, Dari brings his passion for advocacy and service. He's committed to expanding access to equine and farm-based therapies for special needs students.</p>
-                        </div>
-                        <div class="pt-4 border-t border-gray-200">
-                            <h3 class="text-xl font-bold text-dark mb-2">Our Shared Vision</h3>
-                            <p class="text-gray-600">As students at Council Rock North High School and close friends, Francis and Dari founded Beyond Limits Care Foundation to create a welcoming community where special needs students can thrive through animal-assisted therapy programs.</p>
-                        </div>
-                    </div>
-                `,
-                showCloseButton: true,
-                confirmButtonColor: '#8dd0bc',
-                confirmButtonText: 'Close',
-                width: '800px'
-            });
-        }
-
-        function showFeatureAlert() {
-            Swal.fire({
-                title: 'Contact Our Team',
-                html: `
-                    <div class="space-y-4 py-4">
-                        <div class="text-center">
-                            <p class="mb-4"><i data-feather="info" class="inline mr-2"></i> General inquiries: <a href="mailto:info@beyondlimitscarefoundation.org" class="text-primary hover:text-secondary">info@beyondlimitscarefoundation.org</a></p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="text-center p-4">
-                                <h3 class="font-bold text-md mb-1">Dariel Rozinsky</h3>
-                                <p class="text-sm"><i data-feather="phone" class="inline mr-1"></i> 215-512-2248</p>
-                                <p class="text-sm break-all"><i data-feather="mail" class="inline mr-1"></i> <a href="mailto:dariel@beyondlimitscarefoundation.org" class="text-primary hover:text-secondary">dariel@beyondlimitscarefoundation.org</a></p>
-                            </div>
-                            <div class="text-center p-4">
-                                <h3 class="font-bold text-md mb-1">Francis Bisignano</h3>
-                                <p class="text-sm"><i data-feather="phone" class="inline mr-1"></i> 215-933-2228</p>
-                                <p class="text-sm break-all"><i data-feather="mail" class="inline mr-1"></i> <a href="mailto:francis@beyondlimitscarefoundation.org" class="text-primary hover:text-secondary">francis@beyondlimitscarefoundation.org</a></p>
-                            </div>
-                        </div>
-                    </div>
-                `,
-                icon: 'info',
-                confirmButtonColor: '#8dd0bc',
-                confirmButtonText: 'Close',
-                width: '800px',
-                backdrop: `
-                    rgba(141,208,188,0.4)
-                    url("${feather.toSvg('users', { width: 64, height: 64 })}")
-                    center top
-                    no-repeat
-                `,
-                didOpen: () => {
-                    feather.replace();
-                }
-            });
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
-</html>
+                            <p class="text-gray-600">Inspired by his autistic brother's love for horses, Francis
