@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beyond Limits Care Foundation</title>
-    <!-- Favicon and manifest (point to static folder if used) -->
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
     <link rel="manifest" href="/static/site.webmanifest" />
@@ -138,6 +137,183 @@
             </div>
         </div>
     </section>
-    <!-- OTHER SECTIONS UNCHANGED; Use the same image logic for further content -->
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">How We Help</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Emotional -->
+                <div class="text-center">
+                    <div class="benefit-icon">
+                        <i data-feather="smile" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Emotional</h3>
+                    <p class="text-gray-600">Reducing stress & anxiety while building confidence and emotional regulation</p>
+                </div>
+                <!-- Cognitive -->
+                <div class="text-center">
+                    <div class="benefit-icon">
+                        <i data-feather="cpu" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Cognitive</h3>
+                    <p class="text-gray-600">Improving focus, problem-solving skills, and sequential thinking</p>
+                </div>
+                <!-- Physical -->
+                <div class="text-center">
+                    <div class="benefit-icon">
+                        <i data-feather="activity" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Physical</h3>
+                    <p class="text-gray-600">Developing balance, coordination, muscle tone and motor skills</p>
+                </div>
+                <!-- Social -->
+                <div class="text-center">
+                    <div class="benefit-icon">
+                        <i data-feather="users" class="text-accent w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Social</h3>
+                    <p class="text-gray-600">Enhancing communication, trust, empathy and teamwork abilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">Stay Connected</h2>
+            <p class="text-gray-600 mb-8">Subscribe for updates on our programs, events, and success stories.</p>
+            <form class="flex flex-col sm:flex-row gap-2">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <button type="submit" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-md transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-xl font-bold text-white">Beyond Limits</span>
+                    </div>
+                    <p class="text-gray-300">Bringing the Therapy of Horses to Children with Special Needs</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Equine Therapy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Village Farm</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Community Partners</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Get Involved</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Partner</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold">Contact</h3>
+                    <div class="pl-4">
+                        <h4 class="font-medium text-gray-300 mb-1">For general inquiries:</h4>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <i data-feather="mail" class="w-4 h-4 text-gray-300"></i>
+                            <a href="mailto:info@beyondlimitscarefoundation.org" class="text-gray-300 hover:text-white transition break-all">info@beyondlimitscarefoundation.org</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Beyond Limits Care Foundation. All rights reserved.</p>
+                <p class="mt-2">501(c)(3) Non-Profit Organization</p>
+                <script>
+                    document.querySelectorAll('a[href="#contact"]').forEach(link => {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            showFeatureAlert();
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuPanel = menu.querySelector('div[class*="translate-x-full"]');
+            menu.classList.toggle('hidden');
+            menuPanel.classList.toggle('translate-x-0');
+        }
+        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+        function showFounders() {
+            Swal.fire({
+                title: 'Our Founders',
+                html: `
+                    <div class="text-left space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Francis Bisignano</h3>
+                            <p class="text-gray-600">Inspired by his autistic brother's love for horses, Francis recognized the therapeutic power of animals. His personal connection fuels his commitment to helping special needs students discover growth and confidence through farm-based programs.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Dari Rozinsky</h3>
+                            <p class="text-gray-600">With experience in local politics and community initiatives, Dari brings his passion for advocacy and service. He's committed to expanding access to equine and farm-based therapies for special needs students.</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <h3 class="text-xl font-bold text-dark mb-2">Our Shared Vision</h3>
+                            <p class="text-gray-600">As students at Council Rock North High School and close friends, Francis and Dari founded Beyond Limits Care Foundation to create a welcoming community where special needs students can thrive through animal-assisted therapy programs.</p>
+                        </div>
+                    </div>
+                `,
+                showCloseButton: true,
+                confirmButtonColor: '#8dd0bc',
+                confirmButtonText: 'Close',
+                width: '800px'
+            });
+        }
+        function showFeatureAlert() {
+            Swal.fire({
+                title: 'Contact Our Team',
+                html: `
+                    <div class="space-y-4 py-4">
+                        <div class="text-center">
+                            <p class="mb-4"><i data-feather="info" class="inline mr-2"></i> General inquiries: <a href="mailto:info@beyondlimitscarefoundation.org" class="text-primary hover:text-secondary">info@beyondlimitscarefoundation.org</a></p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="text-center p-4">
+                                <h3 class="font-bold text-md mb-1">Dariel Rozinsky</h3>
+                                <p class="text-sm"><i data-feather="phone" class="inline mr-1"></i> 215-512-2248</p>
+                                <p class="text-sm break-all"><i data-feather="mail" class="inline mr-1"></i> <a href="mailto:dariel@beyondlimitscarefoundation.org" class="text-primary hover:text-secondary">dariel@beyondlimitscarefoundation.org</a></p>
+                            </div>
+                            <div class="text-center p-4">
+                                <h3 class="font-bold text-md mb-1">Francis Bisignano</h3>
+                                <p class="text-sm"><i data-feather="phone" class="inline mr-1"></i> 215-933-2228</p>
+                                <p class="text-sm break-all"><i data-feather="mail" class="inline mr-1"></i> <a href="mailto:francis@beyondlimitscarefoundation.org" class="text-primary hover:text-secondary">francis@beyondlimitscarefoundation.org</a></p>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                icon: 'info',
+                confirmButtonColor: '#8dd0bc',
+                confirmButtonText: 'Close',
+                width: '800px',
+                backdrop: `
+                    rgba(141,208,188,0.4)
+                    url("${feather.toSvg('users', { width: 64, height: 64 })}")
+                    center top
+                    no-repeat
+                `,
+                didOpen: () => {
+                    feather.replace();
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
